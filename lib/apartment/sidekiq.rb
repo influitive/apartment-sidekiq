@@ -2,6 +2,11 @@ require "apartment/sidekiq/version"
 
 module Apartment
   module Sidekiq
-    # Your code goes here...
+    module Middleware
+      autoload :Client, 'apartment/sidekiq/middleware/client'
+      autoload :Server, 'apartment/sidekiq/middleware/server'
+    end
   end
 end
+
+require 'apartment/sidekiq/railtie' if defined?(Rails)
