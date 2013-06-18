@@ -1,0 +1,1 @@
+require 'apartment/sidekiq'
