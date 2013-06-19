@@ -1,8 +1,9 @@
 # Apartment::Sidekiq
 
-WIP : This is just the start of what will eventually be official support for the Sidekiq worker queue.
+Official Support for Sidekiq with the Apartment Gem.
 
-NOT TO BE USED IN PRODUCTIN (yet)
+This gem takes care of storing the current tenant that a job is enqueued within.
+It will then switch to that tenant for the duration of the job processing.
 
 ## Installation
 
@@ -20,7 +21,9 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+That's it. There's nothing to do. Each job that is queued will get an additional entry
+storing `Apartment::Database.current` when it is queued. Then when the server pops it,
+it will run job within an `Apartment::Database.process` block.
 
 ## Contributing
 
