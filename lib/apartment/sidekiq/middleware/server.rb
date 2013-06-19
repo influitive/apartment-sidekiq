@@ -1,5 +1,5 @@
 module Apartment::Sidekiq::Middleware
-  class Client
+  class Server
     def call(worker_class, item, queue)
       Apartment::Database.process(item['apartment']) do
         yield
