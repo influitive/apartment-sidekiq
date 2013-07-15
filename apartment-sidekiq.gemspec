@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["brad@influitive.com"]
   spec.description   = %q{Enable Multi-tenant supported jobs to work with Sidekiq background worker}
   spec.summary       = %q{Sidekiq support for Apartment}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/influitive/apartment-sidekiq"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
