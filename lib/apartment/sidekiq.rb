@@ -1,11 +1,12 @@
 require 'apartment/sidekiq/version'
 require 'sidekiq'
 
+require 'apartment/sidekiq/middleware/client'
+require 'apartment/sidekiq/middleware/server'
+
 module Apartment
   module Sidekiq
     module Middleware
-      autoload :Client, 'apartment/sidekiq/middleware/client'
-      autoload :Server, 'apartment/sidekiq/middleware/server'
 
       def self.run
         ::Sidekiq.configure_client do |config|
