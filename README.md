@@ -23,7 +23,7 @@ Or install it yourself as:
 
 That's it. There's nothing to do. Each job that is queued will get an additional entry
 storing `Apartment::Tenant.current` when it is queued. Then when the server pops it,
-it will run job within an `Apartment::Tenant.process` block.
+it will run job within an `Apartment::Tenant.switch` block.
 
 ## Contributing
 
