@@ -21,7 +21,7 @@ module Apartment
           end
 
           config.server_middleware do |chain|
-            chain.insert_before ::Sidekiq::Middleware::Server::RetryJobs, Apartment::Sidekiq::Middleware::Server
+            chain.add Apartment::Sidekiq::Middleware::Server
           end
         end
       end
