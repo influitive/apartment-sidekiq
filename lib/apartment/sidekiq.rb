@@ -21,7 +21,11 @@ module Apartment
           end
 
           config.server_middleware do |chain|
-            chain.add Apartment::Sidekiq::Middleware::Server
+            if defined?(::Sidekiq::Batch::Server)
+              chain.insert_before Sidekiq::Batch::Server, Apartment::Sidekiq::Middleware::Server
+            else
+              chain.add Apartment::Sidekiq::Middleware::Server
+            end
           end
         end
       end
