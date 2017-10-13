@@ -1,5 +1,7 @@
 # Apartment::Sidekiq
 
+[![Gem Version](https://badge.fury.io/rb/apartment-sidekiq.svg)](https://badge.fury.io/rb/apartment-sidekiq)
+
 Official Support for Sidekiq with the Apartment Gem.
 
 This gem takes care of storing the current tenant that a job is enqueued within.
